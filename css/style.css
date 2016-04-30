@@ -1,0 +1,68 @@
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+/*  display: none;*/
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+
+.chart {
+  height: 500px;
+  position: relative;
+}
+
+.dot {
+	opacity: 0;
+}
+
+
+
+/* Tooltip styles below */
+/*The tooltip must have a position of 'absolute'.
+And the '.chart' div must have a position of 'relative'.
+Why? The 'absolute' 'position' defines position relative to the nearest parent with a position attribute.
+If we dont' define a 'position' property, the .chart div with the 'absolute' position will look to the next parent.
+If it finds none, it will position relative to the window. We want our tooltip to stay in the chart.
+More info here: http://www.w3schools.com/css/css_positioning.asp;
+*/
+
+.chart {
+  height: 500px;
+  position: relative;
+}
+
+.tt {
+	background-color: #fff;
+	padding: 8px;
+	outline: 1px solid #ccc;
+	display: none;
+	position: absolute;
+}
+
+.tt .name {
+	font-size: 14px;
+}
+
+.tt .date {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.tt .rate {
+	font-size: 18px;
+	font-weight: bold;
+}
