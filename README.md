@@ -1,4 +1,4 @@
-Multi-series line chart with Tooltips.
+###Multi-series line chart with Tooltips.
 
 This extends the Multi-series line example to include tooltips. There are other ways to create tooltips, but this is my favorite method: add a plain-old html tootlip div that sits inside of the chart div and use JavaScript to show, hide, populate, and position the tooltip div as you mouseover elements in the chart. I like this method because it keeps the tooltip in conventional html and allows you to use a text wrap. SVG text doesn't like to wrap. The steps:
 
@@ -38,7 +38,7 @@ This extends the Multi-series line example to include tooltips. There are other 
 })
 ```
 
-4) Pass the data values (Ex.: date and unemployment rate) to the tooltip as html
+4) Pass the data values (Ex.: date and unemployment rate) to the tooltip as html. (Notice we're using the Moment.js library here to format our dates for display):
 ```
 var displayDate = moment(d.date).format("MMM. YYYY");
 var displayVal = d.rate+"%";
